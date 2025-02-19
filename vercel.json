@@ -1,5 +1,4 @@
 {
-    "rootDirectory": "client",
     "builds": [
       {
         "src": "client/index.html",
