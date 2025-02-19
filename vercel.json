@@ -1,8 +1,8 @@
 {
     "builds": [
       {
-        "src": "client/index.html",
-        "use": "@vercel/static-build"
+        "src": "client/**",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
