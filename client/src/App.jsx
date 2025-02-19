@@ -39,13 +39,11 @@ const ArrayImplementation = () => {
 
       <hr />
       <h1>
-        ** I just filled my form to switch to Advance Stage from Beginner. If I have not been switched, My Beginner
-        Project is linked below. So You can click the button to view it **
+        I just filled my form to switch to Advance Stage from Beginner. If I have not been switched, My Beginner
+        Project is linked below. So You can click the button to view it
       </h1>
       <button style={buttonStyle}>
-        <a href="./index0.html" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
-          Click Here
-        </a>
+        
       </button>
     </div>
   );
