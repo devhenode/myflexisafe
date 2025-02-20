@@ -1,75 +1,35 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import NotesApp from './components/NotesApp';
+import ArrayImplementation from './components/ArrayImplementation';
 
-const ArrayImplementation = () => {
+function App() {
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>Array Implementation</h1>
-      <p>Welcome to my array implementation Deliverables</p>
+    <Router>
+      <div>
+        <nav>
+          <Link to="/">Home</Link> |{' '}
+          <Link to="/notes">Notes App</Link>
+        </nav>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <table style={{ borderCollapse: "collapse", width: "50%", margin: "20px auto" }}>
-          <thead>
-            <tr>
-              <th style={tableHeaderStyle}>Details</th>
-              <th style={tableHeaderStyle}>Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={tableCellStyle}>Full Name</td>
-              <td style={tableCellStyle}>Henry Ayobami Oderinde</td>
-            </tr>
-            <tr>
-              <td style={tableCellStyle}>Email</td>
-              <td style={tableCellStyle}>devodehenry.2000@gmail.com</td>
-            </tr>
-            <tr>
-              <td style={tableCellStyle}>Track</td>
-              <td style={tableCellStyle}>Frontend</td>
-            </tr>
-            <tr>
-              <td style={tableCellStyle}>Stage</td>
-              <td style={tableCellStyle}>
-                Advance (I am just switching track to Advance. I was initially at <strong>Beginner</strong>)
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/notes" element={<NotesApp />} />
+        </Routes>
       </div>
+    </Router>
+  );
+}
 
-      <hr />
-      <h1>
-        I just filled my form to switch to Advance Stage from Beginner. If I have not been switched, My Beginner
-        Project is linked below. So You can click the button to view it
-      </h1>
-      <button style={buttonStyle}>
-        
-      </button>
+function Home() {
+  return (
+    <div>
+      <h1>Welcome to the Home Page</h1>
+      <p>Click the button below to go to the Notes App.</p>
+      <Link to="/notes">
+        <button>Go to Notes App</button>
+      </Link>
     </div>
   );
-};
+}
 
-const tableHeaderStyle = {
-  border: "1px solid #000",
-  padding: "8px",
-  textAlign: "left",
-  backgroundColor: "#f2f2f2",
-};
-
-const tableCellStyle = {
-  border: "1px solid #000",
-  padding: "8px",
-  textAlign: "left",
-};
-
-const buttonStyle = {
-  padding: "10px 20px",
-  fontSize: "16px",
-  cursor: "pointer",
-  backgroundColor: "#007BFF",
-  color: "white",
-  border: "none",
-  borderRadius: "5px",
-};
-
-export default ArrayImplementation;
+export default App;
