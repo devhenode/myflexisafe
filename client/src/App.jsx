@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import NotesApp from './components/NotesApp';
-import ArrayImplementation from './components/ArrayImplementation';
+// import ArrayImplementation from './components/ArrayImplementation';
 
 function App() {
   return (
