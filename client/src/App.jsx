@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import NotesApp from './components/NotesApp';
+import WeekSix from './components/Week6';
 // import ArrayImplementation from './components/ArrayImplementation';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/notes" element={<NotesApp />} />
+          <Route path="/week6" element={<WeekSix />} />
         </Routes>
       </div>
     </Router>
@@ -27,7 +29,11 @@ function Home() {
       <p>Click the button below to go to the Notes App.</p>
       <Link to="/notes">
         <button>Go to Notes App</button>
-      </Link>
+      </Link> 👈 Week 5 task
+        <br />
+      <Link to="/week6">
+        <button>Go to Notes App</button>
+      </Link> 👈 Week 6 task
     </div>
   );
 }
