@@ -1,3 +1,4 @@
+import React from 'react'; // Add this line
 import { useRef } from 'react';
 import useLocalStorage from './useLocalStorage';
 import './NotesApp.css';
